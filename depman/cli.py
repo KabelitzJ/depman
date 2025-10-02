@@ -354,6 +354,8 @@ def cmd_sync(args):
     if (d.get("name"), d.get("path")) in cfg_keys
   ]
 
+  print("")
+
   write_lock(lock_path, lock)
 
   deps_cmake = Path(base_abs / "dependencies.cmake")
@@ -452,6 +454,8 @@ def cmd_lock(args):
     d for d in (lock.get("dependencies") or [])
     if (d.get("name"), d.get("path")) in cfg_keys
   ]
+
+  print("")
 
   write_lock(lock_path, lock)
 
