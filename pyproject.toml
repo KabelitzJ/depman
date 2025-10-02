@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "depman"
+version = "0.1.0"
+description = "YAML-based git submodule manager that writes a CMake deps file"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6"
+]
+authors = [{ name = "KabelitzJ" }]
+
+[project.scripts]
+depman = "depman.cli:main"
