@@ -148,7 +148,7 @@ def write_dependencies_cmake(cfg: dict, out_path: Path, dep_rel_paths: dict[str,
     full_rel = dep_rel_paths[name]
 
     # ---- block header
-    lines.append(f"# ---- {name}")
+    lines.append(f"# {name}")
     if url:
       lines.append(f"# url: {url}")
     lines.append(f"# path: {full_rel}")
